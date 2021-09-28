@@ -10,6 +10,11 @@ function getTranslationUrl(input){
 
 }
 
+function errorHandler(error){
+    alert("Something wrong withe server ..Try Again")
+}
+
+
 
 function clickHandler(event){
 console.log(event);
@@ -19,6 +24,7 @@ console.log(event);
     .then(json =>{
         outputText.innerText= json.contents.translated;
     })
+    .catch(errorHandler)
 }
 
 
